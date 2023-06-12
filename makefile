@@ -19,4 +19,4 @@ cup:
 cdown:
 	docker-compose \
 		-f ./$(DOCKER_COMPOSE) \
-		down
+		down -v

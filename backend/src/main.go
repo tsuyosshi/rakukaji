@@ -2,13 +2,11 @@ package main
 
 import (
 	"net/http"
+	"rakukaji/router"
 )
 
 func main() {
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/", router.Hello)
+	http.HandleFunc("/userCreateTest", router.UserCreateTest)
 	http.ListenAndServe(":8080", nil)
-}
-
-func hello(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello!"))
 }
